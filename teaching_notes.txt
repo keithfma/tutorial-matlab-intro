@@ -1,0 +1,259 @@
+Introduction to MATLAB Tutorial
+Teaching Notes
+Keith Ma, May 2015
+
+Overview ----------------------------------------------------------------------
+
+This tutorial is a combination of demonstration and hands-on exercises. The goal
+is to get students up and running using and writing MATLAB code. The tutorial is
+split into two parts:
+
+  (1) Overview of basic syntax and usage
+  (2) Worked example 
+
+Part 1 ------------------------------------------------------------------------
+
+PREPARATION
+
+*Open MATLAB on the projector, and increase the font size as needed.
+
+*Write the following on the board, space permitting:
+
+  Outline:
+    Part 1: Overview
+      About MATLAB
+      The graphical user interface (GUI) and editor
+      Variables
+      Operators 
+      Functions
+      Help and documentation
+      Branches
+      Loops
+    Part 2: Worked example
+    
+    Operators: 
+      Arithmetic: + - * / ^
+      Logic: = ' : 
+      Other: == ~= > > >= < <= | &
+    
+    Subsetting: 
+      Draw a matrix, label the elements
+
+    Functions: 
+      [out1, out2, ...] = func_name(in1, in2, ...)
+
+    Branches:
+      if test
+        commands
+      else
+        commands
+      end
+
+    Loops:
+      for vector 
+        commands
+      end
+
+      while test
+        commands
+      end
+
+
+INTRODUCTION
+
+*About RCS: 
+    Here to help with any and all research computing: tutorials, consulting,
+    support.
+
+*Goals:
+    Get you up and running using and writing MATLAB code.
+    Demonstration and hands-on exercises, no slides.
+    2 parts: overview of basic syntax and usage, longer worked example.
+    Worked example is available online.
+    Lots of resources online that cover the overview from part 1
+    
+*Outline for part 1 (see above)
+
+*Setup:
+    Login
+    Start MATLAB
+
+...as MATLAB slowly opens...
+
+*About MATLAB:
+  A programming language and a graphical development environment.
+  The programming language is 
+    proprietary 
+    high-level 
+    interpreted 
+  The development environment includes:
+    interactive mode
+    editor
+    tools for debugging, profiling, etc
+  Many tasks can be accomplished both programmatically or interactively 
+
+...MATLAB is now open...
+
+*The MATLAB GUI
+  Point out the:
+    command window, run and debug commands and code
+    current folder, directory we are working in, visible to MATLAB
+    workspace, all the data we have read or created
+    editor, text editor that recognizes MATLAB syntax
+
+VARIABLES
+
+*Define
+  Named data stored in the computer's memory and accessible for MATLAB to use
+    and manipulate. 
+  Create a new variable by assigning a value to it using = 
+
+    scalar = 1;
+    vector = [2, 3, 4];
+    matrix = [5, 6, 7; 8, 9, 10];
+    word = 'turkey';
+
+*Workspace
+ otice the new variables appear in the workspace.
+  Now available for us to use 
+  Notice 
+
+*Attributes
+  Name 
+    Text label used to identify the data
+    Case sensitive, must start with letter, some restricted chars and words
+  Class
+    Internal format of the data
+    Default is double (15-17 sig. digits, exponent btw -308 and 308, Inf, NaN)
+    They appear as integers - they are not
+    Other important: logical, char, cell, objects
+  Size
+    All variables in MATLAB are treated as matrices.
+    scalars, vectors, grids, ND-arrays 
+    fundamental to MATLAB
+
+OPERATORS
+
+*Define: 
+  Special symbols that are used to perform the most common actions
+  Variable shapes must be compatible
+  
+*Arithmetic, matrix
+  scalar, w/scalar, w/vector, w/matrix
+  vector, w/vector dot, w/vector dyad
+  matrix, w/vector, w/matrix
+
+*Arithmetic, element-wise
+  vector, w/vector
+  matrix, w/matrix
+
+*Logic, always element-wise
+  scalar
+  vector
+  matrix
+
+*Sequences
+  start:step:stop
+
+*Exercise
+  Use the sequence to make new vars equvalent to 'vector' and 'matrix'
+  Prove that they are qual using a logical operator
+
+*Segue
+  The logical comparison produced a matrix result, it might be nice to have a
+    scalar answer to the question: "are any values of a different than b?"
+  For this (and many) other tasks, we can make use of MATLAB's built-in
+    functions.
+
+FUNCTIONS, BUILT-IN
+
+*Syntax
+  See the board
+
+*Define
+  A function is a tool that performs a well-defined task
+  Accepts inputs, does something with them, returns output
+  Separate workspace
+    cannot see your workspace except for the inputs
+    cannot change your workspace except for outputs
+  "Clear box", the source for many function can be viewed (and altered)
+  May be designed for flexibility, several ways to use
+
+yn = any(vector ~= vector)
+yn = any(any(matrix ~= matrix))
+
+*Help and docs
+  Finding the right function
+    Many, many available, in MATLAB base and in the many add-on toolboxes
+    Try "search documentation"
+    Try the web!
+  Using a function
+    help func
+    doc func
+
+*Example: compute sin wave and plot
+
+  period = 10;
+  t = 0:period;
+  wave = sin(t*2*pi/period);
+  plot(t, wave)
+  xlabel('time, s');
+  ylabel('data');
+  title('Do the wave');
+
+*Example: normalize so the range is [0,1]
+
+  plot(t, (wave+1)/2)
+
+*Example: compute eggcrate and plot
+  
+  egg = wave*wave';
+  imagesc(egg)
+  colorbar
+  title('Eggs!')
+
+* Be warned!
+  From this point on, I will start using new built-in functions as needed. 
+  Use 'help' and/or ask me if you get confused
+
+SUBSETS
+
+*Make use of the grid drawn on the board to make sense of these examples.
+
+*By index
+  single element
+  block
+  checkerboard
+  whole row (1:end, and : syntax)
+  whole column
+  all elements (: syntax)
+
+*By logical index
+
+LOOPS
+
+*Define
+  Special keywords allow you to repeat a block of code many times
+  Syntax
+  Example
+
+
+BRANCHES
+
+
+SCRIPTS and FUNCTIONS, USER
+
+*Motivation
+  Typing commands is tedious and prone to errors
+  Scripts allow us to save and run long sequences of commands
+  Functions allow us to hide the details of a task behind an interface
+  The purpose of using these tools is:
+    Clarity
+    Repeatability
+    Reuseability
+  Most of your work in Matlab will be writing and running scripts and
+    functions using the tools we covered above.
+
+*Demonstrate in part 2
+
+TAKE A BREATH!

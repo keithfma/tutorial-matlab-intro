@@ -1,0 +1,16 @@
+(1) Download data from MassGIS.
+
+Site: http://www.mass.gov/anf/research-and-tech/it-serv-and-support/application-serv/office-of-geographic-information-massgis/datalayers/qrbath.html
+
+Download link: http://wsgw.mass.gov/data/gispub/shape/state/qrbath.zip
+
+(2) Interpolate contours to a grid in Matlab.
+
+Use shaperead() to read in the data
+Gather the contour vertices as x,y,z points
+Grid to a matrix
+Set NaNs (outside teh convex hull of the data) to 0, since these areas are outside the lake and have 0 depth
+Save data as a simple csv file
+
+
+
