@@ -10,8 +10,8 @@ The tutorial is a combination of demonstration and hands-on exercises. The goal
 is to get students up and running using and writing MATLAB code. The tutorial is
 split into two parts:
 
-  (1) Overview of basic syntax and usage
-  (2) Worked example 
+  1. Overview of basic syntax and usage
+  2. Worked example 
 
 "Pretty" lesson materials are available for the worked example in part 2. These
 are generated using MATLAB publishing markup.  
