@@ -264,6 +264,31 @@ LOOPS
 
 BRANCHES
 
+*Define
+  Special keywords that change the program behavior using logical test
+  Different data = run different code
+  Syntax (see board)
+  Do a reeeaaallly simple example
+
+*Really simple example:
+  
+  atoms = 1;
+  if atoms == 1
+    disp('The cat is alive');
+  else
+    disp('The cat is dead');
+  end
+  
+*Example:
+  Find prime numbers and print them (loop and branch together)
+
+  for i = 1:100
+    fact = factor(i);
+    num_fact = length(fact);
+    if fact == 1
+      disp(i)
+    end
+  end
 
 SCRIPTS and FUNCTIONS, USER
 
@@ -275,7 +300,7 @@ SCRIPTS and FUNCTIONS, USER
     Clarity
     Repeatability
     Reuseability
-  Most of your work in Matlab will be writing and running scripts and
+  Most of your work in MATLAB will be writing and running scripts and
     functions using the tools we covered above.
 
 *Demonstrate in part 2
