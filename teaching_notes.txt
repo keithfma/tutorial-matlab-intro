@@ -17,6 +17,9 @@ PREPARATION
 
 *Open MATLAB on the projector, and increase the font size as needed.
 
+*In the Workspace window, enable the attributes needed in the lesson (Name,
+Class, Size, ...) 
+
 *Write the following on the board, space permitting:
 
   Outline:
@@ -33,8 +36,8 @@ PREPARATION
     
     Operators: 
       Arithmetic: + - * / ^
-      Logic: = ' : 
-      Other: == ~= > > >= < <= | &
+      Logical: == ~= > > >= < <= | &
+      Other: = ' : 
     
     Subsetting: 
       Draw a matrix, label the elements
@@ -82,7 +85,7 @@ INTRODUCTION
 
 *About MATLAB:
   A programming language and a graphical development environment.
-  The programming language is 
+  The programming language is: 
     proprietary 
     high-level 
     interpreted 
@@ -114,9 +117,8 @@ VARIABLES
     word = 'turkey';
 
 *Workspace
- otice the new variables appear in the workspace.
+  Notice the new variables appear in the workspace.
   Now available for us to use 
-  Notice 
 
 *Attributes
   Name 
@@ -135,33 +137,35 @@ VARIABLES
 OPERATORS
 
 *Define: 
-  Special symbols that are used to perform the most common actions
+  Special characters that signify the most common actions
   Variable shapes must be compatible
+ 
+*Demonstrate
   
-*Arithmetic, matrix
-  scalar, w/scalar, w/vector, w/matrix
-  vector, w/vector dot, w/vector dyad
-  matrix, w/vector, w/matrix
+  *Matrix arithmetic
+    scalar, w/scalar, w/vector, w/matrix
+    vector, w/vector dot, w/vector dyad
+    matrix, w/vector, w/matrix
 
-*Arithmetic, element-wise
-  vector, w/vector
-  matrix, w/matrix
+  *Element-wise arithmetic
+    vector, w/vector
+    matrix, w/matrix
 
-*Logic, always element-wise
-  scalar
-  vector
-  matrix
+  *Logic (always element-wise)
+    scalar
+    vector
+    matrix
 
-*Sequences
-  start:step:stop
+  *Sequences
+    start:step:stop
 
 *Exercise
   Use the sequence to make new vars equvalent to 'vector' and 'matrix'
-  Prove that they are qual using a logical operator
+  Prove that they are equal using a logical operator
 
 *Segue
   The logical comparison produced a matrix result, it might be nice to have a
-    scalar answer to the question: "are any values of a different than b?"
+    scalar answer to the question: "are any values of A different than B?"
   For this (and many) other tasks, we can make use of MATLAB's built-in
     functions.
 
@@ -176,7 +180,7 @@ FUNCTIONS, BUILT-IN
   Separate workspace
     cannot see your workspace except for the inputs
     cannot change your workspace except for outputs
-  "Clear box", the source for many function can be viewed (and altered)
+  Use as "black box", but has a lid - the source for many function can be viewed (and altered)
   May be designed for flexibility, several ways to use
 
 yn = any(vector ~= vector)
@@ -234,9 +238,29 @@ LOOPS
 
 *Define
   Special keywords allow you to repeat a block of code many times
-  Syntax
-  Example
+  Syntax (see board)
+  
+*Example: 
+  Leibniz formula for pi ( 4 * sum for n = 0:inf of (-1)^n/(2*n+1) )
 
+    nmax = 100;
+    mypi = 0;
+    for n = 0:nmax
+      mypi = mypi + (-1)^n / (2*n+1);
+    end
+    mypi = 4*mypi;
+
+  Copy & paste from command history to repeat
+  Do a few times with increasing values of nmax
+  Note the built-in value of pi, and the users ability to accidentally mask
+    this with thier own variable
+
+*Extension: 
+  using vector math (cleaner and faster, note element-wise operators)
+
+    nmax = 100;
+    n = 0:nmax;
+    mypi = 4*sum( -1.^(n) ./ (2*n+1);
 
 BRANCHES
 
