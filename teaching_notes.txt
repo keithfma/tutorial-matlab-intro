@@ -22,16 +22,10 @@ Class, Size, ...)
 
 *Write the following on the board, space permitting:
 
+  Contact info: my name, email, phone number
+
   Outline:
-    Part 1: Overview
-      About MATLAB
-      The graphical user interface (GUI) and editor
-      Variables
-      Operators 
-      Functions
-      Help and documentation
-      Loops
-      Branches
+    Part 1: Overview of basic usage and syntax
     Part 2: Worked example
     
     Operators: 
@@ -45,12 +39,7 @@ Class, Size, ...)
     Functions: 
       [out1, out2, ...] = func_name(in1, in2, ...)
 
-    Branches:
-      if test
-        commands
-      else
-        commands
-      end
+    Leibniz formula for pi ( 4 * sum for n = 0:inf of (-1)^n/(2*n+1) )
 
     Loops:
       for vector 
@@ -58,6 +47,13 @@ Class, Size, ...)
       end
 
       while test
+        commands
+      end
+
+    Branches:
+      if test
+        commands
+      else
         commands
       end
 
@@ -83,7 +79,7 @@ INTRODUCTION
 
 ...as MATLAB slowly opens...
 
-*About MATLAB:
+*About MATLAB (brief):
   A programming language and a graphical development environment.
   The programming language is: 
     proprietary 
@@ -97,7 +93,7 @@ INTRODUCTION
 
 ...MATLAB is now open...
 
-*The MATLAB GUI
+*The MATLAB GUI (brief)
   Point out the:
     command window, run and debug commands and code
     current folder, directory we are working in, visible to MATLAB
@@ -163,11 +159,20 @@ OPERATORS
   Use the sequence to make new vars equvalent to 'vector' and 'matrix'
   Prove that they are equal using a logical operator
 
-*Segue
-  The logical comparison produced a matrix result, it might be nice to have a
-    scalar answer to the question: "are any values of A different than B?"
-  For this (and many) other tasks, we can make use of MATLAB's built-in
-    functions.
+SUBSETS
+
+*Make use of the grid drawn on the board to make sense of these examples.
+
+*By index
+  single element
+  block
+  checkerboard
+  whole row (1:end, and : syntax)
+  whole column
+  all elements (: syntax)
+
+*By logical index
+
 
 FUNCTIONS, BUILT-IN
 
@@ -183,9 +188,6 @@ FUNCTIONS, BUILT-IN
   Use as "black box", but has a lid - the source for many function can be viewed (and altered)
   May be designed for flexibility, several ways to use
 
-yn = any(vector ~= vector)
-yn = any(any(matrix ~= matrix))
-
 *Help and docs
   Finding the right function
     Many, many available, in MATLAB base and in the many add-on toolboxes
@@ -194,6 +196,13 @@ yn = any(any(matrix ~= matrix))
   Using a function
     help func
     doc func
+
+*Example: reducing a logical comparison
+  The logical comparison produced a matrix result, it might be nice to have a
+    scalar answer to the question: "are any values of A different than B?"
+
+yn = any(vector ~= vector)
+yn = any(any(matrix ~= matrix))
 
 *Example: compute sin wave and plot
 
@@ -220,19 +229,6 @@ yn = any(any(matrix ~= matrix))
   From this point on, I will start using new built-in functions as needed. 
   Use 'help' and/or ask me if you get confused
 
-SUBSETS
-
-*Make use of the grid drawn on the board to make sense of these examples.
-
-*By index
-  single element
-  block
-  checkerboard
-  whole row (1:end, and : syntax)
-  whole column
-  all elements (: syntax)
-
-*By logical index
 
 LOOPS
 
@@ -240,7 +236,7 @@ LOOPS
   Special keywords allow you to repeat a block of code many times
   Syntax (see board)
   
-*Example: 
+*Example: For loop, Leibniz formula for pi 
   Leibniz formula for pi ( 4 * sum for n = 0:inf of (-1)^n/(2*n+1) )
 
     nmax = 100;
@@ -254,6 +250,18 @@ LOOPS
   Do a few times with increasing values of nmax
   Note the built-in value of pi, and the users ability to accidentally mask
     this with thier own variable
+
+*Example: For loop, Leibniz formula for pi 
+  Leibniz formula for pi ( 4 * sum for n = 0:inf of (-1)^n/(2*n+1) )
+
+  mypi0 = 0;
+  mypi1 = 0;
+  epsilon = 1e-6;
+  while abs(mypi1-mypi0) >= epsilon
+    mypi0 = mypi1;
+    mypi1 = mypi0 + (-1)^n / (2*n+1);
+  end
+  mypi = 4*mypi;
 
 *Extension: 
   using vector math (cleaner and faster, note element-wise operators)
