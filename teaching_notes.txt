@@ -30,8 +30,8 @@ Class, Size, ...)
       Operators 
       Functions
       Help and documentation
-      Branches
       Loops
+      Branches
     Part 2: Worked example
     
     Operators: 

@@ -12,7 +12,7 @@
 % repeatable and reusable.
 %
 % *Input*: Gridded water depth (bathymetry) for the Quabbin Resevoir in
-% Central Massachussets. The the data are  provided as _comma separated
+% Central Massachussets. The data are  provided as _comma separated
 % values_ (a _csv_ file) arranged from N-to-S in rows, and E-to-W in
 % columns at 20 m spacing. The data are derived from bathymetric contours
 % provided by the Massachusetts Dept. of Conservation & Recreation,
@@ -71,7 +71,7 @@
 %% Define paramaters
 %
 % Since we are using a script, we need to define the input data explictly at the
-% start of the script. We will need four peices of information: the data file
+% start of the script. We will need four pieces of information: the data file
 % name, the grid spacing, and the number of levels at which to compute area and
 % volume. Like so:
 
