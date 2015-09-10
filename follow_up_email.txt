@@ -1,0 +1,23 @@
+Hi everyone,
+
+Thanks for coming to the tutorial yesterday. I am writing to point you towards some online resources, and to make sure that you have contact information for me and the Research Computing Services team in case you need some help in the future. 
+
+You can find the worked example from the second half of the tutorial at the link below. The "Introduction to MATLAB" materials are the last item in the "Mathematics and Data Analysis Tutorials" section. 
+
+  http://www.bu.edu/tech/support/research/training-consulting/live-tutorials/
+
+As I mentioned in class, the materials from the first part (basic MATLAB usage and syntax) are covered in many nice web tutorials. To save you a bit of time, below are links to lists of examples and tutorials curated by Mathworks, and to PDFs of the very nice textbook "Numerical Computing with MATLAB". Personally, I like the textbook best of all.
+
+Tutorials list: http://www.mathworks.com/academia/student_center/tutorials/launchpad.html
+Examples list:  http://www.mathworks.com/examples/
+Textbook:       http://www.mathworks.com/moler/chapters.html
+
+Feel free to contact me and the rest of the Research Computing Services team with problems big and small at any time. We are here to help and happy to do it. To reach me directly, you can email keithma@bu.edu or call my office at 617-358-1873. To reach the whole team, you can submit a help request via the web at the link below, or by emailing ithelp@bu.edu. I hope to hear from you!
+
+  http://www.bu.edu/tech/contact/
+
+I wish you all the best of luck as you get started with MATLAB, and please do not hesitate to contact us for help.
+
+Best,
+Keith
+
