@@ -1,7 +1,7 @@
-# bu_tutorial_matlab_intro
-Teaching materials for my "Introduction to MATLAB" tutorial
+# tutorial-matlab-intro
+Teaching materials for the "Introduction to MATLAB" tutorial I taught at Boston University several years ago.
 
-This lesson is designed for live tutorials offered at Boston University through
+This lesson is designed for a live tutorials previously offered at Boston University through
 the Research Computing Services group. Feel free to use and modify the material
 as you like. I also encourage you to contribute any corrections and improvements
 that you may make.
